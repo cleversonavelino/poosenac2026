@@ -35,6 +35,12 @@ public class TelaPrincipal extends JFrame {
 		itemCliente.addActionListener(e -> {
 			desktopPane.add(new TelaCliente());
 		});
+		
+		JMenuItem itemListarCliente = 
+				new JMenuItem("Listar Clientes");
+		itemListarCliente.addActionListener(e -> {
+			desktopPane.add(new TelaListarCliente());
+		});
 
 		// Cria o item "Sair" dentro do menu
 		JMenuItem itemSair = new JMenuItem("Sair");
@@ -46,6 +52,7 @@ public class TelaPrincipal extends JFrame {
 
 		// Adiciona o item ao menu
 		menuCadastros.add(itemCliente);
+		menuCadastros.add(itemListarCliente);
 		menuCadastros.add(itemSair);
 
 		// Adiciona o menu à barra de menu

@@ -54,7 +54,7 @@ public class TelaCliente extends JInternalFrame {
 
 			System.out.println(cliente.getNome());
 			System.out.println(cliente.getSenha());
-			
+			//vamos salvar o cliente no banco de dados
 			ClienteRepository clienteRepository = 
 					new ClienteRepository();
 			clienteRepository.cadastrar(cliente);
