@@ -39,7 +39,8 @@ public class ClienteRepository {
 	
 	public List<Cliente> listar() {
 		EntityManager entityManager = emf.createEntityManager();
-		Query query = entityManager.	createQuery("select c from Cliente c");
+		Query query = entityManager.
+				createQuery("select c from Cliente c");
 		List<Cliente> clientes = query.getResultList();
 		entityManager.close();
 		return clientes;

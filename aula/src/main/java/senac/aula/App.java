@@ -1,9 +1,5 @@
 package senac.aula;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
-import senac.aula.model.Cliente;
 import senac.aula.view.TelaPrincipal;
 
 /**

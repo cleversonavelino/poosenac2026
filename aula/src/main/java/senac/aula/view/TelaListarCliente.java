@@ -44,7 +44,7 @@ public class TelaListarCliente extends JInternalFrame {
 
 		// Criar JScrollPane com posição e tamanho definidos
 		JScrollPane scrollPane = new JScrollPane(tabela);
-		scrollPane.setBounds(50, 50, 300, 150);
+		scrollPane.setBounds(50, 50, 500, 150);
 
 		// Adicionar à janela
 		add(scrollPane);		
