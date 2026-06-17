@@ -6,6 +6,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import senac.aula.model.Cliente;
+
 public class TelaPrincipal extends JFrame {
 
 	public TelaPrincipal() {
@@ -33,13 +35,13 @@ public class TelaPrincipal extends JFrame {
 
 		JMenuItem itemCliente = new JMenuItem("Clientes");
 		itemCliente.addActionListener(e -> {
-			desktopPane.add(new TelaCliente());
+			desktopPane.add(new TelaCliente(new Cliente()));
 		});
 		
 		JMenuItem itemListarCliente = 
 				new JMenuItem("Listar Clientes");
 		itemListarCliente.addActionListener(e -> {
-			desktopPane.add(new TelaListarCliente());
+			desktopPane.add(new TelaListarCliente(desktopPane));
 		});
 
 		// Cria o item "Sair" dentro do menu

@@ -33,7 +33,9 @@ public class ClienteRepository {
 		}
 		
 		EntityManager entityManager = emf.createEntityManager();
-		entityManager.persist(cliente);
+		entityManager.getTransaction().begin();
+		entityManager.merge(cliente);
+		entityManager.getTransaction().commit();
 		entityManager.close();
 	}
 	
@@ -47,6 +49,11 @@ public class ClienteRepository {
 	}
 	
 	public Cliente buscar(Integer id) {
-		return null;
+		EntityManager entityManager = emf.createEntityManager();
+		Query query = entityManager.
+				createQuery("select c from Cliente c where c.id = :id");
+		query.setParameter("id", id);
+		Cliente cliente = (Cliente) query.getSingleResult();
+		return cliente;
 	}	
 }
